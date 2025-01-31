@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tutorial - Chapters 2-4</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="favorites.html">Favorites</a>
+        <a href="about us.html">About us</a>
+        <a href="chapters.html">chapters</a>
+    </nav>
+    <!-- Chapter 2 Examples (existing) -->
+    <div class="chapter">
+        <h1>Chapter 2: Values, Types & Operators</h1>
+        <!-- Example 1: Variable Declaration -->
+        <div class="example">
+            <h2>1. Variable Declaration (let vs const)</h2>
+            <button onclick="demoLet()">Demo let</button>
+            <button onclick="demoConst()">Demo const</button>
+            <div class="output" id="variableOutput"></div>
+        </div>
+
+        <!-- Example 2: typeof Operator -->
+        <div class="example">
+            <h2>2. typeof Operator</h2>
+            <input type="text" id="typeInput" placeholder="Enter any value">
+            <button onclick="showType()">Show Type</button>
+            <div class="output" id="typeOutput"></div>
+        </div>
+
+        <!-- Example 3: Arithmetic Operators -->
+        <div class="example">
+            <h2>3. Arithmetic & Assignment Operators</h2>
+            <input type="number" id="num1" placeholder="Enter number">
+            <button onclick="increment()">++</button>
+            <button onclick="decrement()">--</button>
+            <button onclick="addFive()">+=5</button>
+            <div class="output" id="mathOutput">Current Value: 0</div>
+        </div>
+
+        <!-- Example 4: Comparison & Logical Operators -->
+        <div class="example">
+            <h2>4. Comparison & Logical Operators</h2>
+            <input type="text" id="val1" placeholder="Value 1">
+            <input type="text" id="val2" placeholder="Value 2">
+            <button onclick="compareValues()">Compare (== vs ===)</button>
+            <div class="output" id="compareOutput"></div>
+        </div>
+
+        <!-- Example 5: Type Coercion -->
+        <div class="example">
+            <h2>5. Type Coercion</h2>
+            <input type="text" id="coercion1" value="5">
+            <input type="number" id="coercion2" value="2">
+            <button onclick="showCoercion()">Add Values</button>
+            <div class="output" id="coercionOutput"></div>
+        </div>
+        <!-- Example 6: Ternary Operator -->
+        <div class="example">
+            <h2>6. Ternary Operator (?:)</h2>
+            <input type="number" id="userAge" placeholder="Enter age" value="20">
+            <button onclick="checkAdult()">Check Adult Status</button>
+            <div class="output" id="ternaryOutput"></div>
+        </div>
+
+        <!-- Example 7: var vs let -->
+        <div class="example">
+            <h2>7. var vs let Scoping</h2>
+            <button onclick="demoScoping()">Run Scope Demo</button>
+            <div class="output" id="scopeOutput"></div>
+        </div>
+
+        <!-- Example 8: Symbols -->
+        <div class="example">
+            <h2>8. Symbols Demo</h2>
+            <button onclick="demoSymbols()">Create Symbols</button>
+            <div class="output" id="symbolOutput"></div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Chapter 3: Control Structures -->
+    <div class="chapter">
+        <h1>Chapter 3: Control Structures</h1>
+
+        <!-- Example 1: Template Literals -->
+        <div class="example">
+            <h2>Template Literals: Dynamic Strings with Variables & Dates</h2>
+            <input type="text" id="nameInput" placeholder="Enter name">
+            <button onclick="showGreeting()">Show Greeting</button>
+            <div class="output" id="greetingOutput"></div>
+        </div>
+
+        <!-- Example 2: Variable Swapping -->
+        <div class="example">
+            <h2>Variable Swapping: Using Destructuring Assignment</h2>
+            <button onclick="swapVariables()">Swap Variables</button>
+            <div class="output" id="swapOutput"></div>
+        </div>
+
+        <!-- Example 3: Switch Statement -->
+        <div class="example">
+            <h2>Switch Statement: Convert Number to Weekday</h2>
+            <input type="number" id="dayNumber" min="1" max="7" placeholder="Enter day (1-7)">
+            <button onclick="showDay()">Get Day</button>
+            <div class="output" id="dayOutput"></div>
+        </div>
+
+        <!-- Example 4: Loops -->
+        <div class="example">
+            <h2>Loop Structures: for & while (1-5 and 6-10)</h2>
+            <button onclick="runLoops()">Run Loop Examples</button>
+            <div class="output" id="loopOutput"></div>
+        </div>
+    </div>
+
+    <!-- Chapter 4: Functions -->
+    <div class="chapter">
+        <h1>Chapter 4: Functions</h1>
+
+        <!-- Example 1: Function Declaration -->
+        <div class="example">
+            <h2>Function Declaration: Adding Two Numbers</h2>
+            <input type="number" id="numA" placeholder="Enter number">
+            <input type="number" id="numB" placeholder="Enter number">
+            <button onclick="calculateSum()">Add Numbers</button>
+            <div class="output" id="sumOutput"></div>
+        </div>
+
+        <!-- Example 2: Arrow Functions -->
+        <div class="example">
+            <h2>Arrow Function: Squaring a Number</h2>
+            <input type="number" id="squareInput" placeholder="Enter number">
+            <button onclick="squareNumber()">Square It</button>
+            <div class="output" id="squareOutput"></div>
+        </div>
+
+        <!-- Example 3: Closures -->
+        <div class="example">
+            <h2>Closure: Persistent Click Counter</h2>
+            <button onclick="counter()">Click Counter</button>
+            <div class="output" id="counterOutput"></div>
+        </div>
+
+        <!-- Example 4: Callbacks -->
+        <div class="example">
+            <h2>Callback Function: setTimeout Timer (3 seconds)</h2>
+            <button onclick="startTimer()">Start Timer</button>
+            <div class="output" id="timerOutput"></div>
+        </div>
+    </div>
+
+    <!-- Chapter 5: Arrays & Objects -->
+    <div class="chapter">
+        <h1>Chapter 5: Arrays & Objects</h1>
+
+        <!-- Array Operations -->
+        <div class="example">
+            <h2>Array Methods: push/pop/shift/unshift</h2>
+            <button onclick="demoArrayMethods()">Run Array Methods</button>
+            <div class="output" id="arrayOutput"></div>
+        </div>
+
+        <!-- Multidimensional Array -->
+        <div class="example">
+            <h2>Multidimensional Array: Matrix Operations</h2>
+            <button onclick="showMatrix()">Show 3x3 Matrix</button>
+            <div class="output" id="matrixOutput"></div>
+        </div>
+
+        <!-- Object Operations -->
+        <div class="example">
+            <h2>Object Manipulation: CRUD Operations</h2>
+            <button onclick="demoObjectOps()">Run Object Demo</button>
+            <div class="output" id="objectOutput"></div>
+        </div>
+
+        <!-- JSON Demo -->
+        <div class="example">
+            <h2>JSON Conversion: Stringify & Parse</h2>
+            <button onclick="demoJSON()">Run JSON Demo</button>
+            <div class="output" id="jsonOutput"></div>
+        </div>
+    </div>
+
+    <!-- Chapter 6: DOM Manipulation -->
+    <div class="chapter">
+        <h1>Chapter 6: DOM Manipulation</h1>
+
+        <!-- Element Selection -->
+        <div class="example">
+            <h2>Element Selection: querySelector & getElementById</h2>
+            <input type="text" id="colorInput" placeholder="Enter color name">
+            <button onclick="changeHeadingColor()">Change Title Color</button>
+        </div>
+
+        <!-- Dynamic Elements -->
+        <div class="example">
+            <h2>Dynamic Elements: createElement & appendChild</h2>
+            <input type="text" id="listItem" placeholder="Enter list item">
+            <button onclick="addListItem()">Add to List</button>
+            <ul id="dynamicList"></ul>
+        </div>
+
+        <!-- Style Manipulation -->
+        <div class="example">
+            <h2>Style Manipulation: CSS Property Updates</h2>
+            <button onclick="toggleBox()">Toggle Blue Box</button>
+            <div id="styleBox" style="width:100px;height:100px;margin:10px"></div>
+        </div>
+
+        <!-- Event Handling -->
+        <div class="example">
+            <h2>Event Handling: click Event Listener</h2>
+            <button id="clickCounter">Click Me!</button>
+            <div class="output" id="eventOutput">Clicks: 0</div>
+        </div>
+    </div>
+
+    <!-- Chapter 7: JavaScript Events -->
+    <div class="chapter">
+        <h1>Chapter 7: JavaScript Events</h1>
+
+        <!-- Event Listeners vs Inline -->
+        <div class="example">
+            <h2>Event Listeners vs Inline Handlers</h2>
+            <button id="listenerBtn">Event Listener</button>
+            <button onclick="inlineHandler()">Inline Handler</button>
+            <div class="output" id="handlerOutput"></div>
+        </div>
+
+        <!-- Mouse Events -->
+        <div class="example">
+            <h2>Mouse Events: Hover & Click Effects</h2>
+            <div id="colorBox" style="width:100px;height:100px;background:#eee"></div>
+            <div class="output" id="mouseOutput"></div>
+        </div>
+
+        <!-- Keyboard Events -->
+        <div class="example">
+            <h2>Keyboard Events: Real-time Input Display</h2>
+            <input type="text" id="keyInput" placeholder="Type here">
+            <div class="output" id="keyOutput"></div>
+        </div>
+
+        <!-- Focus/Blur Events -->
+        <div class="example">
+            <h2>Focus/Blur Events: Input Status</h2>
+            <input type="text" id="focusInput" placeholder="Click in/out">
+            <div class="output" id="focusOutput"></div>
+        </div>
+
+        <!-- Form Events -->
+        <div class="example">
+            <h2>Form Events: Submit & Input Tracking</h2>
+            <form id="demoForm">
+                <input type="text" id="formInput" placeholder="Type something">
+                <button type="submit">Submit</button>
+            </form>
+            <div class="output" id="formOutput"></div>
+        </div>
+
+        <!-- Event Delegation -->
+        <div class="example">
+            <h2>Event Delegation: Dynamic List Clicks</h2>
+            <button onclick="addListItem()">Add List Item</button>
+            <ul id="eventList">
+                <li>Item 1</li>
+                <li>Item 2</li>
+            </ul>
+            <div class="output" id="delegationOutput"></div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
