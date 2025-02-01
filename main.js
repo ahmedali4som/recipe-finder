@@ -204,7 +204,7 @@ let letVariable = 10;
 const constVariable = 20;
 
 function helloWorld(){
-    document.getElementById('variableOutput').innerHTML = `Hello World`
+    document.getElementById('HellovariableOutput').innerHTML = `Hello World`
 }
 
 function demoLet() {
